@@ -24,7 +24,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 /**
  * A spring-boot application that includes a Camel route builder to setup the Camel routes
  */
-@CamelOpenTracin
+@CamelOpenTracing
 @EnableMongoRepositories
 @SpringBootApplication
 @ImportResource({"classpath:spring/camel-context.xml"})
