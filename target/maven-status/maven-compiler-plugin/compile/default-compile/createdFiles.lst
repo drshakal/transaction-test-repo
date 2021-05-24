@@ -1,0 +1,10 @@
+in\co\dhdigital\repositories\TransactionDetailsDao.class
+in\co\dhdigital\processors\ResponseProcessor.class
+in\co\dhdigital\models\TransactionDetailsResponse.class
+in\co\dhdigital\processors\ExceptionProcessor.class
+in\co\dhdigital\models\FaultType.class
+in\co\dhdigital\processors\PostProcessor.class
+in\co\dhdigital\services\TransactionDetailsService.class
+in\co\dhdigital\models\TransactionDetail.class
+in\co\dhdigital\Application.class
+in\co\dhdigital\repositories\TransactionDetailsRepository.class
