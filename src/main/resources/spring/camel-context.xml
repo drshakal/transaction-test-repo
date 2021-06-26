@@ -5,7 +5,6 @@
     <bean class="in.co.dhdigital.processors.ResponseProcessor" id="responseProcessor"/>
     <bean class="in.co.dhdigital.processors.PostProcessor" id="postProcessor"/>
     <bean class="in.co.dhdigital.processors.ExceptionProcessor" id="exceptionProcessor"/>
-    
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <restConfiguration bindingMode="json" component="jetty"
             host="0.0.0.0" port="8081"/>
@@ -29,7 +28,6 @@
                 <doCatch id="_doCatch1">
                     <exception>java.lang.Exception</exception>
                     <to id="_to2" uri="direct:exception"/>
-                    
                 </doCatch>
             </doTry>
             <process id="_process2" ref="responseProcessor"/>
@@ -39,7 +37,7 @@
             <log id="_log2" message="Inside post-transaction-detiails route"/>
             <bean id="_bean2" method="insertTransactionDetail" ref="transactionDetailsService"/>
         </route>
-       <route id="exception">
+        <route id="exception">
             <from id="_from3" uri="direct:exception"/>
             <process id="_process3" ref="exceptionProcessor"/>
         </route>

@@ -8,7 +8,8 @@ spring:
       authentication-database: training
 
 management:
-  port: 8080
+  server:
+    port: 8080
   endpoints:
     web:
       exposure:
