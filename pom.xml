@@ -13,14 +13,14 @@
 		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
-		<fuse.version>7.8.0.fuse-sb2-780038-redhat-00001</fuse.version>
+		<fuse.version>7.7.0.fuse-sb2-770010-redhat-00001</fuse.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.jboss.redhat-fuse</groupId>
 				<artifactId>fuse-springboot-bom</artifactId>
-				<version>7.8.0.fuse-sb2-780038-redhat-00001</version>
+				<version>7.7.0.fuse-sb2-770010-redhat-00001</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -72,23 +72,22 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-mongodb</artifactId>
 		</dependency>
-		<!-- Tracing dependencies -->
+	<!-- Tracing dependencies -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-opentracing-starter</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.jaegertracing</groupId>
-			<artifactId>jaeger-tracerresolver</artifactId>
+			<artifactId>jaeger-client</artifactId>
 			<version>0.32.0</version>
 		</dependency>
 		<dependency>
-			<groupId>io.jaegertracing</groupId>
-			<artifactId>jaeger-thrift</artifactId>
-			<version>0.32.0</version>
+			<groupId>io.opentracing.contrib</groupId>
+			<artifactId>opentracing-agent</artifactId>
+			<version>0.4.0</version>
+			<scope>provided</scope>
 		</dependency>
-
-		<!-- Tracing dependencies end -->
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
