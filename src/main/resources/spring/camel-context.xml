@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       https://camel.apache.org/schema/spring/camel-spring.xsd">
-    <bean class="in.co.dhdigital.services.TransactionDetailsService" id="transactionDetailsService"/>
+    <!--    <bean class="in.co.dhdigital.services.TransactionDetailsService" id="transactionDetailsService"/>
     <bean class="in.co.dhdigital.processors.ResponseProcessor" id="responseProcessor"/>
     <bean class="in.co.dhdigital.processors.PostProcessor" id="postProcessor"/>
     <bean class="in.co.dhdigital.processors.ExceptionProcessor" id="exceptionProcessor"/>
+    <bean class="in.co.dhdigital.routes.TransactionRest" id="transactionrest"/> -->
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-        <restConfiguration bindingMode="json" component="jetty"
+        <!-- <restConfiguration bindingMode="json" component="jetty"
             host="0.0.0.0" port="8081"/>
         <rest id="rest" path="/api/v1/transactiondetails">
             <get id="get"
@@ -40,6 +41,6 @@
         <route id="exception">
             <from id="_from3" uri="direct:exception"/>
             <process id="_process3" ref="exceptionProcessor"/>
-        </route>
+        </route> -->
     </camelContext>
 </beans>
